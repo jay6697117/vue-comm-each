@@ -12,11 +12,18 @@ export default {
     };
   },
   created() {
-    //      监听派发的事件
+    // 监听派发的事件
+    // bus.$on('eventA', this.logFn);
     bus.$on('eventA', res => {
-      console.log('res :>> ', res);
+      // console.log('res :>> ', res);
       this.msg = res;
+      this.logFn(res)
     });
+  },
+  methods: {
+    logFn(param) {
+      console.log(`logFn param:`, param);
+    }
   }
 };
 </script>
