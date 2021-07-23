@@ -8,7 +8,7 @@
 
 <script>
 //引入bus文件
-import bus from '../utils/bus.js';
+// import bus from '../utils/bus.js';
 export default {
   data() {
     return {
@@ -20,7 +20,8 @@ export default {
     brother() {
       //派发事件
       this.counter += 1;
-      bus.$emit('eventA', this.msg + ' -- ' + this.counter);
+      // bus.$emit('eventA', this.msg + ' -- ' + this.counter);
+      this.$emit('eventA', this.msg + ' -- ' + this.counter);
     }
   }
 };
