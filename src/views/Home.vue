@@ -30,6 +30,8 @@
       ></i-button>
       <hr />
       <div class="show-dom">App nameObj: {{ nameObj }}</div>
+      <div class="show-dom">Home appComp.userInfo: {{ appComp.userInfo }}</div>
+      <button @click="changeUser">更新用户信息</button>
     </div>
   </div>
 </template>
@@ -44,14 +46,20 @@ export default {
       title: 'Home页面'
     };
   },
-  inject: ['nameObj'],
+  inject: ['nameObj', 'appComp'],
   components: {
     'i-button': IButton
   },
   methods: {
+    changeUser(){
+      this.appComp.getUser();
+    },
     btnClickHandle(sizeName) {
       console.log('Home btnClickHandle sizeName :>> ', sizeName);
     }
+  },
+  created() {
+    console.log('Home.vue this.appComp:', this.appComp)
   },
   mounted() {
     console.log('this.$refs.iButton1 :>> ', this.$refs.iButton1);
