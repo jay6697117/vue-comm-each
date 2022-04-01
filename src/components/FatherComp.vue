@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>{{ counterObj.counter }}</div>
+    <div>FatherComp counterObj: {{ counterObj }}</div>
     <button @click="add">+</button>
     <button @click="sub">-</button>
     <br />
