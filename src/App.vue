@@ -10,12 +10,14 @@
 </template>
 
 <script>
+import userInfo from '@/mixins/userInfo.js'
+
 export default {
   name: 'App',
+  mixins:[userInfo],
   data() {
     return {
       title: 'App根组件',
-      userInfo: null,
       dataObj: {
         componentName: 'App component'
       }
@@ -27,20 +29,6 @@ export default {
       nameObj: this.dataObj,
       appComp: this
     };
-  },
-  created() {
-    console.log('App.vue this:', this);
-    this.getUser();
-  },
-  methods: {
-    getUser() {
-      console.log('getUser run');
-      new Promise((resolve, reject) => {
-        setTimeout(resolve, 1000);
-      }).then(() => {
-        this.userInfo = { name: 'zjh' + Math.floor(Math.random() * 10), age: Math.floor(Math.random() * 100) };
-      });
-    }
   }
 };
 </script>
