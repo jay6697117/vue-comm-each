@@ -10,14 +10,13 @@
 </template>
 
 <script>
-import userInfo from '@/mixins/userInfo.js'
+import userInfo from '@/mixins/userInfo.js';
 
 export default {
   name: 'App',
-  mixins:[userInfo],
+  mixins: [userInfo],
   data() {
     return {
-      title: 'App根组件',
       dataObj: {
         componentName: 'App component'
       }

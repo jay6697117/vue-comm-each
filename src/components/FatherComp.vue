@@ -12,12 +12,12 @@
 <script>
 import SonComp from './SonComp';
 export default {
+  name: 'FatherComp',
   components: {
     SonComp
   },
   data() {
     return {
-      title: 'FatherComp组件',
       counterObj: {
         counter: 0
       }

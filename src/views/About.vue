@@ -18,9 +18,7 @@ export default {
     FatherComp
   },
   data() {
-    return {
-      title: 'About页面'
-    };
+    return {};
   }
 };
 </script>

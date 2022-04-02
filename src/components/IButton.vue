@@ -27,9 +27,7 @@ function oneOf(value, validList) {
 export default {
   inheritAttrs: false,
   data() {
-    return {
-      title: 'i-button组件'
-    };
+    return {};
   },
   props: {
     size: {
