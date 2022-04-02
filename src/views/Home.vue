@@ -43,7 +43,8 @@ export default {
   name: 'Home',
   data() {
     return {
-      title: 'Home页面'
+      title: 'Home页面',
+      nameObj:'lalala Home'
     };
   },
   inject: ['nameObj', 'appComp'],

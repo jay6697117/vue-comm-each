@@ -17,7 +17,8 @@ export default {
   },
   data() {
     return {
-      title: 'SonComp组件'
+      title: 'SonComp组件',
+      nameObj: 'lalala SonComp'
     };
   },
   methods: {
